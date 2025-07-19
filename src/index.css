@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Add this CSS somewhere global or scoped to your component */
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+.prime-color {
+   background: radial-gradient(circle, #deb165 0%, #b98005 80%, #dfa41b 100%);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+bg{
+   background: radial-gradient(circle,  #deb165 0%, #b98005 80%, #dfa41b 100%);
+}
+
+.glitch-typed {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  
+  color: #e6aa32;
+  background: radial-gradient(circle,  #deb165 0%, #b98005 80%, #dfa41b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-align: center;
+  margin-top: 100px;
+  letter-spacing: 2px;
+  white-space: pre;
+  animation: flicker 1.2s infinite;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 22%, 24%, 55% {
+    opacity: 0.3;
+  }
+}
+/* Wiping mask moves diagonally from top-left to bottom-right */
+@keyframes wipeReveal {
+  0% {
+    transform: translate(-100%, -100%);
+  }
+  100% {
+    transform: translate(100%, 100%);
+  }
+}
+
+.wiping-mask {
+  animation: wipeReveal 2s ease forwards;
+  mix-blend-mode: lighten;
+  pointer-events: none;
+  z-index: 15;
+}
+
+/* Text fade and slide animation */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-text-fade-slide {
+  animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 0s;
+}
+
+/* Utility for delayed animation */
+.animation-delay-500 {
+  animation-delay: 0.5s;
+}
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+
