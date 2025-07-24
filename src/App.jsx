@@ -4,13 +4,14 @@ import Navbar from "./components/Shared/Navbar";
 import GlitchTyping from "./components/GlitchTyping";
 import HomeIntro from "./components/HomeIntro";
 
-import SkillsSection from "./components/SkillsSection";
+
 import SkillsMain from "./SkillsSection/SkillsMain";
 import SubSkills from "./SkillsSection/SubSkills";
 import AboutMeMain from "./AboutSection/AboutMeMain";
 import ProjectsMain from "./ProjectsSection/ProjectsMain";
 import ExperienceSection from "./Experience/ExperienceSection";
 import Footer from "./Footer/Footer";
+import ContactMe from "./components/contact/ContactMe";
 
 function App() {
   const [showHomeIntro, setShowHomeIntro] = useState(false);
@@ -19,7 +20,7 @@ function App() {
     // Show HomeIntro after 5 seconds
     const timer = setTimeout(() => {
       setShowHomeIntro(true);
-    }, 5500);
+    }, 3500);
 
     // Cleanup timer on unmount
     return () => clearTimeout(timer);
@@ -44,6 +45,7 @@ function App() {
             <ProjectsMain></ProjectsMain>
       
   <ExperienceSection />
+  <ContactMe></ContactMe>
 
 
             <Footer></Footer>

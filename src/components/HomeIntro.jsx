@@ -3,7 +3,9 @@ import React from "react";
 
 const HomeIntro = () => {
   return (
-    <section className="max-w-4xl bg-black rounded-3xl mx-auto px-6 py-28 text-center text-gray-100 select-none relative overflow-hidden">
+    <section 
+    id="home" 
+    className="max-w-4xl bg-black rounded-3xl mx-auto px-6 py-28 text-center text-gray-100 select-none relative overflow-hidden">
       <div className="wiping-mask absolute inset-0 bg-gradient-to-br from-black to-transparent pointer-events-none"></div>
       
       <div className="relative z-10 space-y-6">

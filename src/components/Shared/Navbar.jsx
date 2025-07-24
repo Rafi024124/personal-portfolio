@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router"; // use react-router-dom
+import { Link } from "react-scroll";
 
 const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "Projects", path: "/projects" },
-  { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
+  { name: "Home", path: "home" },
+  { name: "Projects", path: "projects" },
+  { name: "About", path: "about" },
+  { name: "Contact", path: "contact" },
 ];
 
 export default function CyberpunkNavbar() {

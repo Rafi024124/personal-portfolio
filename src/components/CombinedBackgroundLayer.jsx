@@ -1,4 +1,5 @@
-import MatrixRainBackground from "./MatrixBackground";
+import AnimatedNoise from "./AnimatedNoise";
+
 import ParticleNetworkBackground from "./ParticleNetworkBackground";
 
 
@@ -6,8 +7,9 @@ import ParticleNetworkBackground from "./ParticleNetworkBackground";
 const CombinedBackgroundLayer = () => {
   return (
     <>
-      {/* <MatrixRainBackground /> */}
+      
       <ParticleNetworkBackground />
+     
     </>
   );
 };

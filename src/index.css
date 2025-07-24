@@ -10,7 +10,7 @@
     -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-bg{
+.bg-color{
    background: radial-gradient(circle,  #deb165 0%, #b98005 80%, #dfa41b 100%);
 }
 
