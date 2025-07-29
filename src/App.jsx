@@ -12,6 +12,7 @@ import ProjectsMain from "./ProjectsSection/ProjectsMain";
 import ExperienceSection from "./Experience/ExperienceSection";
 import Footer from "./Footer/Footer";
 import ContactMe from "./components/contact/ContactMe";
+import Project from "./Projects/Project";
 
 function App() {
   const [showHomeIntro, setShowHomeIntro] = useState(false);
@@ -42,7 +43,8 @@ function App() {
 
             <SkillsMain></SkillsMain>
             <SubSkills></SubSkills>
-            <ProjectsMain></ProjectsMain>
+           
+            <Project></Project>
       
   <ExperienceSection />
   <ContactMe></ContactMe>
