@@ -42,7 +42,7 @@ const projects = [
     explore: "#",
     github: 'https://github.com/Rafi024124/Blog-Share-Client',
     description:
-      "Blog Share is a full-stack web application that allows users to share, explore, and engage with blogs.It includes ncludes secure authentication, enabling users to add their own blogs, browse posts shared by others, view categorized and featured blogs, search by title or category, comment on posts, and save favorites to a personal wishlist"
+      "Blog Share is a full-stack web application that allows users to share, explore, and engage with blogs.Users can add their own blogs, browse posts shared by others, view categorized and featured blogs,comment on posts, and save favorites to a personal wishlist"
   },
   {
     name: "Plunt",
@@ -216,20 +216,20 @@ const Project = () => {
                   <h3
                     className='prime-color'
                     style={{
-                      fontSize: '1.3rem',
+                      fontSize: '1 rem',
                     }}
                   >
                     {app.name}
                   </h3>
                   <p 
-                    className='text-xs'
+                    className='text-xs text-center mb-2'
                     style={{  color: '#ddd' }}
                   >
-                    Click here
+                    Click on the card!
                   </p>
-                  <div className='flex gap-3'>
+                  <div className='flex gap-2 '>
                     <a
-                      className='flex-1 text-xs'
+                      className='text-xs flex gap-1 justify-center items-center'
                       href={app.live}
                       target="_blank"
                       rel="noreferrer"
@@ -252,7 +252,7 @@ const Project = () => {
                       Live <BsFillArrowUpRightCircleFill className="lg:text-xl text-xs text-orange-300" />
                     </a>
                     <a
-                      className='flex-1 text-xs'
+                      className=' flex text-xs  gap-1 justify-center items-center'
                       href={app.github}
                       target="_blank"
                       rel="noreferrer"
@@ -262,7 +262,7 @@ const Project = () => {
                         window.open(app.github, '_blank', 'noopener,noreferrer');
                       }}
                       style={{
-                        padding: '10px 15px',
+                        padding: '10px 10px',
                         background: 'rgba(255, 179, 67, 0.10)',
                         borderRadius: '10px',
                         color: '#FFB74D',
@@ -294,7 +294,7 @@ const Project = () => {
                     alignItems: 'center',
                     justifyContent: 'center',
                     textAlign: 'center',
-                    fontSize: '15px',
+                    fontSize: '8px',
                     lineHeight: '1.6',
                    
 
