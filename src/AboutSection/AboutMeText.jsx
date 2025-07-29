@@ -1,4 +1,5 @@
-import { Link } from "react-scroll";
+import { Button, Link } from "react-scroll";
+import NetflixButton from "../components/NetflixButton";
 
 const AboutMeText = () => {
   return (
@@ -34,9 +35,9 @@ const AboutMeText = () => {
         <a
           href="/resume.pdf"
           download
-          className="bg-color text-black font-semibold rounded-full py-2 px-6 text-base sm:text-lg flex items-center gap-2 transition-all duration-500 hover:shadow-[0_0_20px_5px_rgba(253,186,116,0.5)] hover:scale-105"
+          
         >
-          Download Resume
+         <NetflixButton></NetflixButton>
         </a>
       </div>
     </div>

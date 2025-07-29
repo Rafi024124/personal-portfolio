@@ -80,4 +80,63 @@
   animation-delay: 1s;
 }
 
+.btn1 {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 2rem;
+  transition: 0.5s;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #dfa41b
+;
+  transition-delay: 1s;
+}
+
+.btn1:hover{
+  filter: drop-shadow(0 0 10px #ea580c
+
+
+) drop-shadow(0 0 30px #ea580c
+
+
+);
+  letter-spacing: 0.2em;
+  color: white;
+}
+
+.btn1 span {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #ea580c
+
+;
+  pointer-events: none;
+  transition: transform 0.2s ease-in-out;
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+.btn1:hover span{
+  transform: scaleY(1);
+  transform-origin: top;
+}
+.btn span:nth-child(even){
+  transform-origin: top;
+}
+
+.btn:hover span:nth-child(even){
+  transform-origin: bottom;
+}
+
 
