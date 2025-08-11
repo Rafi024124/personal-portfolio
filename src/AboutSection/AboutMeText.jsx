@@ -36,7 +36,13 @@ const AboutMeText = () => {
             My Projects
           </Link>
         </button>
-
+           <a
+                                href="/resume.pdf"
+                                download
+                                
+                              >
+                               <NetflixButton></NetflixButton>
+                              </a>
         
       </div>
     </div>
