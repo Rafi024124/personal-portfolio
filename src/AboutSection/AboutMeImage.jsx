@@ -3,7 +3,7 @@ import mainimg from '../assets/portimg.png';
 
 const AboutMeImage = () => {
   return (
-   <div className="relative w-60 h-60 flex items-center justify-center p-3">
+   <div className="relative w-60 h-60 flex items-center justify-center  p-3">
             {/* Darker egg-shaped glowing oval (left-tilted) */}
             <div
                 className="absolute z-0"

@@ -1,60 +1,58 @@
-import React, { useState, useEffect } from "react";
+
+import { Routes, Route } from "react-router-dom";
+
 import CombinedBackgroundLayer from "./components/CombinedBackgroundLayer";
 import Navbar from "./components/Shared/Navbar";
 import GlitchTyping from "./components/GlitchTyping";
 import HomeIntro from "./components/HomeIntro";
 
-
 import SkillsMain from "./SkillsSection/SkillsMain";
 import SubSkills from "./SkillsSection/SubSkills";
 import AboutMeMain from "./AboutSection/AboutMeMain";
-import ProjectsMain from "./ProjectsSection/ProjectsMain";
+
 import ExperienceSection from "./Experience/ExperienceSection";
 import Footer from "./Footer/Footer";
 import ContactMe from "./components/contact/ContactMe";
 import Project from "./Projects/Project";
+import ProjectDetails from "./details/ProjectDetails";
 
-function App() {
-  const [showHomeIntro, setShowHomeIntro] = useState(false);
 
-  useEffect(() => {
-    // Show HomeIntro after 5 seconds
-    const timer = setTimeout(() => {
-      setShowHomeIntro(true);
-    }, 3500);
 
-    // Cleanup timer on unmount
-    return () => clearTimeout(timer);
-  }, []);
+
+function Home() {
+ 
+
+ 
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* Background Layer */}
+    <>
       <CombinedBackgroundLayer />
-
-      {/* Content container */}
       <div className="relative z-20">
         <Navbar />
         <GlitchTyping />
-        {showHomeIntro && (
+       
           <div>
             <HomeIntro></HomeIntro>
-            <AboutMeMain></AboutMeMain>
-
-            <SkillsMain></SkillsMain>
-            <SubSkills></SubSkills>
-           
-            <Project></Project>
-      
-  <ExperienceSection />
-  <ContactMe></ContactMe>
-
-
-            <Footer></Footer>
+            <AboutMeMain />
+            <SkillsMain />
+            <SubSkills />
+            <Project />
+            <ExperienceSection />
+            <ContactMe />
+            <Footer />
           </div>
-        )}
+        
       </div>
-    </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/project/:id" element={<ProjectDetails/>} />
+    </Routes>
   );
 }
 

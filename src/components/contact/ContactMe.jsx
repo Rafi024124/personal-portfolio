@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFacebook, FaWhatsapp } from 'react-icons/fa';
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -46,7 +46,7 @@ const ContactMe = () => {
   };
 
   return (
-    <div 
+    <div
       id="contact"
       className="max-w-xl mx-auto mt-20 p-8 rounded-2xl bg-black/90 text-cyan-100 shadow-lg border border-cyan-400/20"
     >
@@ -93,8 +93,19 @@ const ContactMe = () => {
       {success && <p className="mt-4 text-green-400 text-center">{success}</p>}
       {error && <p className="mt-4 text-red-500 text-center">{error}</p>}
 
+      {/* Phone Number */}
+      <div className="mt-2 text-cyan-100 text-center mb-4 font-semibold text-lg select-text">
+        📞 Phone:{' '}
+        <a
+          href="tel:+8801611533352"
+          className="hover:text-orange-300 underline"
+        >
+          +880 1611 533 352
+        </a>
+      </div>
+
       {/* Social Icons */}
-      <div className="flex justify-center gap-8 mt-10 prime-color text-3xl">
+      <div className="flex justify-center gap-8 mt-2 prime-color text-3xl">
         <a
           href="https://github.com/Rafi024124"
           target="_blank"
@@ -114,13 +125,23 @@ const ContactMe = () => {
           <FaLinkedin />
         </a>
         <a
-          href="https://www.facebook.com/Moahammad.Rafii?mibextid=wwXIfr&rdid=eU0lijkeCv5chjbq&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Yta9DEEdr%2F%3Fmibextid%3DwwXIfr#"
+          href="https://www.facebook.com/Moahammad.Rafii"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
           className="hover:text-orange-300 transition"
         >
           <FaFacebook />
+        </a>
+        {/* WhatsApp */}
+        <a
+          href="https://wa.me/8801611533352"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp"
+          className="hover:text-orange-300 transition"
+        >
+          <FaWhatsapp />
         </a>
       </div>
     </div>

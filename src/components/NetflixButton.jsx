@@ -33,7 +33,7 @@ export default function NetflixButton() {
     <div className="relative  overflow-hidden group">
       <button
         ref={btnRef}
-        className="btn1 relative z-10 w-full h-full flex justify-center items-center text-white text-lg font-semibold bg-red-700 hover:bg-red-800 rounded-md transition-colors duration-300"
+        className="btn1 relative z-10 w-[80%] h-full flex justify-center items-center text-white text-lg font-semibold bg-red-700 hover:bg-red-800 rounded-md transition-colors duration-300"
       >
         Resume
       </button>

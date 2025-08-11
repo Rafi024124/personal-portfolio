@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import NetflixButton from "../NetflixButton";
+
 
 const navLinks = [
   { name: "Home", path: "home" },
   { name: "Projects", path: "projects" },
   { name: "About", path: "about" },
   { name: "Contact", path: "contact" },
+  { name: "Education", path: "experience" },
 ];
 
 export default function CyberpunkNavbar() {
@@ -17,63 +20,105 @@ export default function CyberpunkNavbar() {
 
   return (
     <>
-      {/* Top Navbar */}
-      <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 backdrop-blur-lg bg-black/85 border-b border-orange-200/40">
-        <div className="text-3xl md:text-4xl font-bold tracking-widest prime-color">
-          RAFI▒░
+      <header
+        className="
+          sticky top-0 left-0 w-full z-50 bg-black/85 backdrop-blur-lg border-b border-orange-200/40
+          px-6 py-4
+          flex items-center justify-between flex-wrap
+          min-h-[64px]
+        "
+      >
+        {/* Large screens: logo left, nav center, button right */}
+        <div className="hidden lg:flex items-center flex-grow">
+          <div className="text-3xl font-bold tracking-widest prime-color flex-shrink-0">
+            RAFI▒░
+          </div>
+
+          <nav className="flex flex-grow justify-center space-x-10 text-lg font-semibold">
+            {navLinks.map(({ name, path }, i) => (
+              <Link
+                key={i}
+                to={path}
+                className="prime-color border-b-2 border-transparent hover:border-orange-300 transition-all duration-300 cursor-pointer"
+              >
+                {name}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="flex-shrink-0">
+            <a
+                      href="/resume.pdf"
+                      download
+                      
+                    >
+                     <NetflixButton></NetflixButton>
+                    </a>
+          </div>
         </div>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-10 text-lg font-semibold">
-          {navLinks.map(({ name, path }, i) => (
-            <Link
-              key={i}
-              to={path}
-              className="prime-color border-b-2 border-transparent hover:border-orange-300 transition-all duration-300"
-            >
-              {name}
-            </Link>
-          ))}
-        </nav>
+        {/* Medium screens: two columns, left: logo + button spaced, right: nav links in row */}
+        <div className="hidden sm:flex lg:hidden w-full max-w-screen-md mx-auto items-center justify-between">
+          <div className="flex items-center space-x-6 flex-shrink-0">
+            <div className="text-3xl font-bold tracking-widest prime-color">
+              RAFI▒░
+            </div>
+            <NetflixButton />
+          </div>
+          <nav className="flex space-x-6 text-lg font-semibold">
+            {navLinks.map(({ name, path }, i) => (
+              <Link
+                key={i}
+                to={path}
+                className="prime-color border-b-2 border-transparent hover:border-orange-300 transition-all duration-300 cursor-pointer"
+              >
+                {name}
+              </Link>
+            ))}
+          </nav>
+        </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-          className={`relative w-10 h-10 flex flex-col justify-between items-center group md:hidden ${
-            menuOpen ? "open" : ""
-          }`}
-        >
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
-        </button>
+        {/* Mobile: logo left + hamburger right */}
+        <div className="flex items-center justify-between w-full sm:hidden">
+          <div className="text-3xl font-bold tracking-widest prime-color flex-shrink-0">
+            RAFI▒░
+          </div>
+
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+            className={`relative w-10 h-10 flex flex-col justify-between items-center group ${
+              menuOpen ? "open" : ""
+            }`}
+          >
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </button>
+        </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile menu overlay */}
       <div
-        className={`fixed inset-0 bg-black/95 backdrop-blur z-40 transition-opacity duration-700 ${
+        className={`fixed inset-0 bg-black/95 backdrop-blur z-40 transition-opacity duration-700 flex flex-col items-center justify-center space-y-14 font-extrabold uppercase text-4xl tracking-widest font-[Orbitron,sans-serif] sm:hidden ${
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div
-          className={`absolute top-1/2 left-1/2 bg rounded-full transition-transform duration-[1000ms] ease-in-out origin-center
-          ${menuOpen ? "scale-[80] opacity-10" : "scale-0 opacity-0"}`}
-          style={{ width: 200, height: 200, marginTop: -100, marginLeft: -100 }}
-        ></div>
-
-        <nav className="fixed inset-0 flex flex-col justify-center items-center space-y-14 font-extrabold uppercase text-4xl md:text-5xl tracking-widest font-[Orbitron,sans-serif]">
+        <nav className="flex flex-col items-center space-y-14">
           {navLinks.map(({ name, path }, i) => (
             <Link
               key={i}
               to={path}
               onClick={() => setMenuOpen(false)}
-              className="prime-color relative group"
+              className="prime-color relative group cursor-pointer"
             >
               <span className="menu-item">{name}</span>
               <span className="menu-underline"></span>
             </Link>
           ))}
+          <div>
+            <NetflixButton />
+          </div>
         </nav>
       </div>
 

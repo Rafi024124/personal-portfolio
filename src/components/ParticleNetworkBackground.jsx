@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const CountdownWithGlowingParticles = () => {
   const canvasRef = useRef(null);
-  const [countdown, setCountdown] = useState(3);
+  const [countdown, setCountdown] = useState(0);
   const [showParticles, setShowParticles] = useState(false);
 
   useEffect(() => {

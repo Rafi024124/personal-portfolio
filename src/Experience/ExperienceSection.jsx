@@ -1,124 +1,94 @@
-import { useState } from "react";
+
 import { motion as Motion } from "framer-motion";
 import { fadeIn } from "../framerMotion/variant";
-import { FaCheckCircle } from "react-icons/fa";
+import austLogo from "../assets/aust1.png";
 
 const ExperienceSection = () => {
-  const [activeTab, setActiveTab] = useState("experience");
-
-  const experienceItems = [
-    "Built and deployed 10+ full-stack projects",
-    "Strong in responsive design & accessibility",
-    "Integrated payment systems like Stripe",
-    "Familiar with Git, GitHub, and CI/CD practices",
-  ];
-
-  const educationItems = [
-    {
-      school: "Ahsanullah University of Science and Technology",
-      gpa: "3.712",
-    },
-    {
-      school: "Dhaka College",
-      gpa: "5",
-    },
-    {
-      school: "Ideal School and College",
-      gpa: "5",
-    },
-  ];
+  // No need for tabs anymore, so no state for activeTab
 
   return (
     <Motion.div
-      id="experience-education"
+      id="experience"
       variants={fadeIn("up", 0.2)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.5 }}
       className="max-w-[1000px] mx-auto mt-24 px-4 text-center rounded-2xl bg-black p-6"
     >
-      <h2 className="text-4xl font-bold prime-color mb-8">Experience & Education</h2>
+      <h2 className="text-4xl font-bold prime-color mb-8">
+       Education
+      </h2>
 
-      {/* Tabs */}
+      {/* Only Education Panel */}
       <div
-        role="tablist"
-        aria-label="Experience and Education Tabs"
-        className="inline-flex bg-gray-900 rounded-full p-1 mb-10"
+        className="text-left text-gray-300 max-w-4xl mx-auto space-y-6"
+        role="region"
+        aria-label="Education"
       >
-        <button
-          role="tab"
-          aria-selected={activeTab === "experience"}
-          aria-controls="tab-experience"
-          id="tab-btn-experience"
-          tabIndex={activeTab === "experience" ? 0 : -1}
-          onClick={() => setActiveTab("experience")}
-          className={`px-6 py-3 rounded-full font-semibold transition ${
-            activeTab === "experience"
-              ? "bg-color text-white"
-              : "text-gray-400 hover:text-white"
-          }`}
-        >
-          Experience
-        </button>
-        <button
-          role="tab"
-          aria-selected={activeTab === "education"}
-          aria-controls="tab-education"
-          id="tab-btn-education"
-          tabIndex={activeTab === "education" ? 0 : -1}
-          onClick={() => setActiveTab("education")}
-          className={`px-6 py-3 rounded-full font-semibold transition ${
-            activeTab === "education"
-              ? "bg-color text-white"
-              : "text-gray-400 hover:text-white"
-          }`}
-        >
-          Education
-        </button>
-      </div>
+        {/* Varsity Card */}
+        <div className="bg-gradient-to-br from-[#0f172a] to-[#1e293b] border border-cyan-400/30 rounded-xl p-6 shadow-lg hover:shadow-cyan-400/30 transition">
+          <div className="flex items-center gap-4">
+            <img
+              src={austLogo}
+              alt="AUST Logo"
+              className="w-16 h-16 object-contain"
+            />
+            <div>
+              <h3 className="text-2xl font-bold prime-color">
+                Ahsanullah University of Science and Technology
+              </h3>
+              <p className="text-orange-100">
+                BSc in Computer Science & Engineering
+              </p>
+              <p className="text-gray-400 text-sm">Dec 2020 – Jan 2025</p>
+            </div>
+          </div>
+          <p className="mt-3 text-sm text-gray-300">
+            Specializing in Web Development & Software Engineering. Current CGPA:{" "}
+            <span className="prime-color font-semibold">3.712/4.00</span>. Actively
+            involved in programming contests, hackathons, and open-source
+            contributions.
+          </p>
+          <ul className="list-disc list-inside mt-3 text-sm text-gray-300 space-y-1">
+            <li>
+              Relevant Coursework: Data Structures, Algorithms, Databases,
+              Computer Networks and Cybersecurity Software Engineering
+            </li>
+            <li>Member of AUST Programming Club</li>
+            <li>Built multiple projects</li>
+            <li>
+              Thesis: Deep Learning-Based Disease Classification in Wireless
+              Capsule Endoscopy: A Comprehensive Study
+            </li>
+          </ul>
+        </div>
 
-      {/* Tab panels */}
-      <div>
-      {/* Experience Panel */}
-<div
-  id="tab-experience"
-  role="tabpanel"
-  aria-labelledby="tab-btn-experience"
-  hidden={activeTab !== "experience"}
-  tabIndex={-1}
-  className="text-left text-lg text-gray-300 max-w-2xl mx-auto grid md:grid-cols-2 gap-6"
->
-  {experienceItems.map((item, idx) => (
-    <p key={idx} className="flex items-center gap-3">
-      <FaCheckCircle className="text-orange-300" />
-      {item}
-    </p>
-  ))}
-</div>
+        {/* College & School Row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* College Card */}
+          <div className="bg-gradient-to-br from-[#0f172a] to-[#1e293b] border border-cyan-400/30 rounded-xl p-6 shadow-md hover:shadow-cyan-400/30 transition">
+            <h3 className="text-xl font-bold prime-color">Dhaka College</h3>
+            <p className="text-orange-100">Higher Secondary Certificate (Science)</p>
+            <p className="text-gray-400 text-sm">2019</p>
+            <span className="mt-2 inline-block text-sm bg-cyan-500/20 px-3 py-1 rounded-full border border-cyan-400">
+              GPA: 5.00 / 5.00
+            </span>
+            <p className="mt-3 text-sm text-gray-300">
+              Participated in science fairs and robotics workshops.
+            </p>
+          </div>
 
-
-        {/* Education Panel */}
-     <div
-  id="tab-education"
-  role="tabpanel"
-  aria-labelledby="tab-btn-education"
-  hidden={activeTab !== "education"}
-  tabIndex={-1}
-  className="text-left text-gray-300 max-w-md mx-auto space-y-6"
->
-  {educationItems.map(({ school, gpa }, idx) => (
-    <div
-      key={idx}
-      className="bg-gray-900 rounded-lg p-4 shadow-md flex justify-between items-center"
-    >
-      <h3 className="text-xl font-semibold prime-color flex-1">{school}</h3>
-      <span className="prime-color font-bold ml-6 whitespace-nowrap">
-        Grade: {gpa}
-      </span>
-    </div>
-  ))}
-</div>
-
+          {/* School Card */}
+          <div className="bg-gradient-to-br from-[#0f172a] to-[#1e293b] border border-cyan-400/30 rounded-xl p-6 shadow-md hover:shadow-cyan-400/30 transition">
+            <h3 className="text-xl font-bold prime-color">Ideal School and College</h3>
+            <p className="text-orange-100">Secondary School Certificate (Science)</p>
+            <p className="text-gray-400 text-sm">2017</p>
+            <span className="mt-2 inline-block text-sm bg-cyan-500/20 px-3 py-1 rounded-full border border-cyan-400">
+              GPA: 5.00 / 5.00
+            </span>
+            <p className="mt-3 text-sm text-gray-300">Awarded for excellence in academics</p>
+          </div>
+        </div>
       </div>
     </Motion.div>
   );
