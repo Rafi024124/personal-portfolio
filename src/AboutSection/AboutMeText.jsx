@@ -37,7 +37,7 @@ const AboutMeText = () => {
           </Link>
         </button>
            <a
-                                href="/resume.pdf"
+                                href="/resume1.pdf"
                                 download
                                 
                               >

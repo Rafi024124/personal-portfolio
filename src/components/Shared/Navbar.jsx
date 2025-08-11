@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import NetflixButton from "../NetflixButton";
 
-
 const navLinks = [
   { name: "Home", path: "home" },
   { name: "Projects", path: "projects" },
@@ -47,13 +46,9 @@ export default function CyberpunkNavbar() {
           </nav>
 
           <div className="flex-shrink-0">
-            <a
-                      href="/resume.pdf"
-                      download
-                      
-                    >
-                     <NetflixButton></NetflixButton>
-                    </a>
+            <a href="/resume1.pdf" download>
+              <NetflixButton></NetflixButton>
+            </a>
           </div>
         </div>
 
@@ -101,7 +96,9 @@ export default function CyberpunkNavbar() {
       {/* Mobile menu overlay */}
       <div
         className={`fixed inset-0 bg-black/95 backdrop-blur z-40 transition-opacity duration-700 flex flex-col items-center justify-center space-y-14 font-extrabold uppercase text-4xl tracking-widest font-[Orbitron,sans-serif] sm:hidden ${
-          menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          menuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
       >
         <nav className="flex flex-col items-center space-y-14">
