@@ -6,7 +6,7 @@ import { fadeIn } from "../framerMotion/variant";
 
 const SkillsMain = () => {
   return (
-    <div id="skill" className="relative z-30 py-12 px-4 bg-black p-4">
+    <div id="skills" className="relative z-30 py-12 px-4 bg-black p-4">
       <div className="max-w-[1200px] mx-auto min-h-[600px] flex flex-col items-center justify-center overflow-hidden">
         {/* Skills Title */}
         <Motion.div
