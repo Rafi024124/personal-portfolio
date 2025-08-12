@@ -59,7 +59,9 @@ export default function CyberpunkNavbar() {
             <div className="text-3xl font-bold tracking-widest prime-color">
               RAFI▒░
             </div>
-            <NetflixButton />
+           <a href="/resume1.pdf" download>
+              <NetflixButton></NetflixButton>
+            </a>
           </div>
           <nav className="flex space-x-6 text-lg font-semibold">
             {navLinks.map(({ name, path }, i) => (
@@ -102,7 +104,7 @@ export default function CyberpunkNavbar() {
             : "opacity-0 pointer-events-none"
         }`}
       >
-        <nav className="flex flex-col items-center space-y-14">
+        <nav className="flex flex-col items-center space-y-5">
           {navLinks.map(({ name, path }, i) => (
             <Link
               key={i}
@@ -115,7 +117,9 @@ export default function CyberpunkNavbar() {
             </Link>
           ))}
           <div>
-            <NetflixButton />
+            <a href="/resume1.pdf" download>
+              <NetflixButton></NetflixButton>
+            </a>
           </div>
         </nav>
       </div>
