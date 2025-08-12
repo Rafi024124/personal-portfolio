@@ -33,12 +33,12 @@ const ProjectDetails = () => {
   return (
     <div
       style={{
-        padding: 30,
+        padding: 50,
         color: '#FFB74D',
         backgroundColor: '#000',
         minHeight: '100vh',
-        maxWidth: 900,
-        margin: '40px auto',
+        minWidth: 100,
+        
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
         borderRadius: 15,
         boxShadow: '0 0 20px #FFB74D33',
@@ -64,8 +64,11 @@ const ProjectDetails = () => {
         ← Back to Home
       </button>
 
-      <h1 style={{ fontSize: '3rem', marginBottom: 10, letterSpacing: '1.5px' }}>{project.name}</h1>
+      <h1 
+      className='text-center'
+      style={{ fontSize: '3rem', marginBottom: 10, letterSpacing: '1.5px' }}>{project.name}</h1>
       <p
+      className='text-center'
         style={{
           fontStyle: 'italic',
           marginBottom: 25,
@@ -78,17 +81,21 @@ const ProjectDetails = () => {
       </p>
 
       <img
-        src={project.image}
-        alt={project.name}
-        style={{
-          width: '100%',
-          maxHeight: 400,
-          objectFit: 'cover',
-          borderRadius: 15,
-          marginBottom: 25,
-          boxShadow: '0 8px 16px rgba(255, 183, 77, 0.4)',
-        }}
-      />
+  src={project.image}
+  alt={project.name}
+  style={{
+    maxWidth: '100%',     
+    maxHeight: 400,       
+    objectFit: 'contain', 
+    borderRadius: 15,
+    marginBottom: 25,
+    boxShadow: '0 8px 16px rgba(255, 183, 77, 0.4)',
+    display: 'block',     // avoid inline spacing issues
+    marginLeft: 'auto',   // center horizontally
+    marginRight: 'auto',
+  }}
+/>
+
 
       <p
         style={{
