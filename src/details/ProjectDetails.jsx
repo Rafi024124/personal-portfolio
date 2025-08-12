@@ -198,7 +198,9 @@ const ProjectDetails = () => {
       )}
 
       <div style={{ display: 'flex', gap: 20 }}>
-        <a
+        {project.live && 
+        
+         <a
           href={project.live}
           target="_blank"
           rel="noopener noreferrer"
@@ -217,6 +219,10 @@ const ProjectDetails = () => {
         >
           Live Site
         </a>
+
+        }
+        
+       
         <a
           href={project.github}
           target="_blank"
@@ -234,7 +240,7 @@ const ProjectDetails = () => {
           onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#ffaa33')}
           onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#FFB74D')}
         >
-          GitHub
+          Source Code
         </a>
       </div>
     </div>

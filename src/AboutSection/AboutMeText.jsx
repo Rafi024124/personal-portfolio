@@ -8,7 +8,7 @@ const AboutMeText = () => {
         About Me
       </h2>
 
-      <p className="text-base sm:text-lg leading-relaxed text-orange-100">
+  <p className="text-base sm:text-lg leading-relaxed text-orange-100">
   I’m <span className="font-semibold prime-color">Rafi</span>, a passionate <span className="font-semibold prime-color">Full Stack Web Developer</span> specializing in the{" "}
   <span className="prime-text font-medium prime-color">MERN Stack</span>. 
   I enjoy building dynamic, user-friendly, and impactful applications that solve real-world problems, 
@@ -16,9 +16,12 @@ const AboutMeText = () => {
   <br /><br />
   My journey into web development started when I realized the power of creating things that people can interact with instantly. What began as curiosity quickly turned into passion as I built my first projects, discovering the joy of bringing ideas to life through code.
   <br /><br />
+  I particularly enjoy working on projects that combine clean, intuitive UI design with robust backend functionality. Whether it’s developing interactive dashboards, crafting seamless e-commerce experiences, or building real-time applications, I’m driven by the challenge of making technology both powerful and enjoyable to use.
+  <br /><br />
   Outside of programming, I’m an <span className="font-semibold prime-color">artist</span> who loves drawing sketches as a creative hobby, and I also enjoy <span className="font-semibold prime-color">dancing</span> whenever I get the chance. I believe balancing tech skills with artistic expression keeps my creativity flowing — and yes, I’m still the guy who’ll suggest a late-night brainstorming session over coffee.
   .
 </p>
+
 
 
 

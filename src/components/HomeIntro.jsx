@@ -18,7 +18,7 @@ const HomeIntro = () => {
           variants={fadeIn("right", 0)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.7 }}
+          viewport={{ once: false, amount: 0.1 }}
           className="w-full md:w-1/2 text-center md:text-left text-gray-100"
         >
           <p className="text-5xl font-extrabold prime-color mb-4">
@@ -35,7 +35,7 @@ const HomeIntro = () => {
           variants={fadeIn("left", 0)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.7 }}
+          viewport={{ once: false, amount: 0.1}}
           className="w-full md:w-1/2 flex justify-center md:justify-end"
         >
           <AboutMeImage></AboutMeImage>
