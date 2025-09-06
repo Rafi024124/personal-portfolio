@@ -47,7 +47,7 @@ export default function CyberpunkNavbar() {
           </nav>
 
           <div className="flex-shrink-0">
-            <a href="/resume1.pdf" download>
+            <a href="/resume12.pdf" download>
               <NetflixButton></NetflixButton>
             </a>
           </div>

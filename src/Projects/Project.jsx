@@ -4,7 +4,7 @@ import gymetry1 from '../assets/gymteryhome.jpg';
 import { FaGithub } from 'react-icons/fa';
 import plant1 from '../assets/plant.jpg';
 import blog1 from '../assets/blogshare1.jpg';
-import app1 from '../assets/appfinity1.jpg';
+import apple from '../assets/apple.jpg';
 import chat from '../assets/chat3.jpg';
 import { BsFillArrowUpRightCircleFill } from 'react-icons/bs';
 
@@ -91,21 +91,23 @@ const projects = [
   },
   {
     id: 5,
-    name: "Appfinity",
-    year: "April2025",
+    name: "Apple-Attires",
+    year: "August2025",
     align: "right",
-    image: app1,
+    image: apple,
     explore: "/project5",
-    github: 'https://github.com/Rafi024124/Appfinity',
+    github: 'https://github.com/Rafi024124/Apple-Attires',
+     live: 'https://appleattires.vercel.app/',
     tech: {
-      "Frontend": ["HTML", "CSS", "Tailwind CSS", "React.js"],
-      "Backend": ["No Backend is used so far"],
-      "Database": ["No Database is used so far"],
-    },
+  "Frontend": ["HTML", "CSS", "Tailwind CSS", "Next.js"],
+  "Backend": ["Next.js API Routes (built-in backend features)"],
+  "Database": ["MongoDB"],
+}
+,
     description:
-      "Appfinity is a sleek frontend-only platform that simulates an app store experience, allowing users to browse categorized apps and visualize the installation process with interactive effects.",
-    challenges: "Creating realistic installation animations and ensuring smooth UI interactions.",
-    futurePlans: "Add backend for user reviews and implement app recommendations."
+      "Apple Attires is an e-commerce platform built with Next.js for selling mobile accessories. Users can browse products by model and color, add items to cart, and place orders, while admins can manage products, handle orders, detect fraud, and create consignments with Steadfast courier service.",
+    challenges: "Integrating Steadfast courier service API for automatic consignment creation and Implementing fraud order detection to ensure business security.",
+    futurePlans: "Implement online payment integration (e.g., Stripe, SSLCOMMERZ, or bKash) and Add order tracking for customers."
   },
 ];
 
